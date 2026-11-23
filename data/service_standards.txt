@@ -1,0 +1,61 @@
+CITY BUS SERVICE STANDARDS DOCUMENT
+=====================================
+Version: 2024-01
+Authority: City Transport Authority
+
+SECTION 1: LOAD STANDARDS
+--------------------------
+1.1 Maximum Load Rule:
+    - Peak hours (07:00-09:00, 16:00-19:00): Bus load must not exceed 80% capacity.
+    - Off-peak hours: Bus load must not exceed 90% capacity.
+    - Each bus has a standard capacity of 60 passengers.
+    - If load exceeds the maximum, frequency must be increased.
+
+1.2 Overcrowding Definition:
+    - A time band is considered overcrowded if the passenger load per bus exceeds the maximum allowed load.
+    - Overcrowded bands must be revised within the next planning cycle.
+
+SECTION 2: WAITING TIME STANDARDS
+-----------------------------------
+2.1 Maximum Waiting Time Rules:
+    - Peak hours: Maximum waiting time between buses = 10 minutes (frequency >= 6 buses/hour).
+    - Off-peak hours: Maximum waiting time = 15 minutes (frequency >= 4 buses/hour).
+    - Late evening (20:00-21:00): Maximum waiting time = 20 minutes (frequency >= 3 buses/hour).
+
+2.2 Minimum Frequency:
+    - No time band shall have fewer than 2 buses per hour.
+    - Fleet limit must not be exceeded at any time.
+
+SECTION 3: FLEET MANAGEMENT
+-----------------------------
+3.1 Fleet Limit Rule:
+    - The number of buses deployed per hour must not exceed the route's fleet limit.
+    - Fleet limit is set by the operations department and cannot be changed without approval.
+
+3.2 Frequency Calculation:
+    - Required buses = ceil(ridership / (capacity * max_load_factor))
+    - If required buses > fleet_limit, cap at fleet_limit and log overcrowding.
+
+SECTION 4: REVISION RULES
+---------------------------
+4.1 Timetable Revision Triggers:
+    - Simulated load exceeds maximum load standard.
+    - Waiting time exceeds the standard for that period.
+    - Passenger complaints about specific time bands.
+
+4.2 Revision Protocol:
+    - Operations Manager reviews simulation results.
+    - Each revision must cite the specific standard clause violated.
+    - Revised timetable takes effect the following day.
+
+SECTION 5: FESTIVAL/SPECIAL EVENT STANDARDS
+--------------------------------------------
+5.1 Festival Day Rule:
+    - On festival days, expected ridership may spike by 40-80%.
+    - Fleet deployment can be increased by borrowing from low-demand routes.
+    - Maximum waiting time standards still apply.
+    - Operations Manager must approve any inter-route fleet transfer.
+
+5.2 Demand Spike Handling:
+    - If ridership exceeds 150% of normal, emergency buses may be requested.
+    - Festival timetable must be published 48 hours in advance.
