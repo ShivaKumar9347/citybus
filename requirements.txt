@@ -1,2 +1,7 @@
 groq
 python-dotenv
+streamlit
+pandas
+matplotlib
+python-docx
+python-pptx

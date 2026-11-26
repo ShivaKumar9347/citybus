@@ -61,7 +61,8 @@ Plan-Act-Reflect Loop
 
 ```
 citybus/
-├── main.py                        # Entry point - runs the full multi-agent system
+├── app.py                         # Interactive Web Dashboard (Streamlit GUI)
+├── main.py                        # Terminal entry point - runs the full multi-agent system
 ├── requirements.txt               # Python dependencies
 ├── .env                           # API key (not committed to GitHub)
 ├── .gitignore
@@ -100,12 +101,18 @@ Create a `.env` file in the project root:
 GROQ_API_KEY=your_groq_api_key_here
 ```
 
-### 3. Run — Normal mode (3 routes, 2 planning rounds)
+### 3. Run — Interactive Web Interface (Streamlit GUI)
+```bash
+streamlit run app.py
+```
+> This opens a full web dashboard in your browser with interactive charts, route selectors, and real-time multi-agent workflow inspection.
+
+### 4. Run — Terminal mode (3 routes, 2 planning rounds)
 ```bash
 python main.py
 ```
 
-### 4. Run — Festival day scenario
+### 5. Run — Festival day scenario (Terminal)
 ```bash
 python main.py --festival
 ```
